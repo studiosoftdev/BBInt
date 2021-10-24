@@ -25,7 +25,7 @@ public class bbint {
 		catch (IOException e) {
 			System.out.println("Error reading file.");
 		}
-		System.out.println(lines.get(lines.size()-1));
+		
 		//begin execution
 		while(i <= lines.size()-2){
 			//iterate though
@@ -45,9 +45,6 @@ public class bbint {
 					}
 				}
 			}
-			//else{
-				//System.out.println(vars.get(vars.size()-1));
-			//}
 			switch(ins[0+3*(depth-1)]){
 				case "clear": //sets var to 0
 					vars.put(ins[varpos], 0);
