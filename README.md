@@ -1,7 +1,8 @@
 # BBInt
 BareBones language Interpreter
 
-*Program commentary:*
+**Program commentary:**
+
 This solution was a whole lotta jank but there was some logic behind it I'll explain:
 I drew some inspiration from my experience with emulators (and for the record NESpep is not up to date on github lol):
 the usage of stacks and pointers to handle loops and the line by line instruction handling
