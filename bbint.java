@@ -25,10 +25,9 @@ public class bbint {
 		catch (IOException e) {
 			System.out.println("Error reading file.");
 		}
-
+		
 		//begin execution
 		while(i <= lines.size()-2){
-			//iterate though
 			String[] ins = lines.get(i).substring(0, lines.get(i).length()-1).split(" "); //instruction
 			String[] nextins = lines.get(i+1).substring(0, lines.get(i+1).length()-1).split(" "); //next ins, used to check exit conditions in loop
 			int varpos = 1+3*(depth-1);
@@ -72,11 +71,10 @@ public class bbint {
 					lastvar = vstack[sp-1];
 				}
 			}
-			
+
 			i++;
 			System.out.println("^^^^^ State: i = " + i + ", ins[0] = " + ins[0] + ", ins[1] = " + ins[1] + ", depth = " + depth + ", lastvar = (" + lastvar + ": " + vars.get(lastvar) + "), sp = " + sp + ", istack[sp-1] = " + istack[sp-1] + ", nextins[0] = " + nextins[0] + ".\n");
 		}
-
 	}
 }
 
