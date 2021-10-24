@@ -25,7 +25,7 @@ public class bbint {
 		catch (IOException e) {
 			System.out.println("Error reading file.");
 		}
-		
+
 		//begin execution
 		while(i <= lines.size()-2){
 			//iterate though
@@ -36,15 +36,7 @@ public class bbint {
 				System.out.print(part + " ");
 			}
 			System.out.println("");
-			//sort out the variable in question, always in position 1 in line
-			if(vars.get(ins[varpos-1]) != null){ //This fixes the code because otherwise it could be null which will throw an error. I actually have no idea how it could be null, but it did throw an error without it.
-				if(!(vars.get(ins[varpos-1]).equals("end"))){ //gotta check if the ins is end as that has no var
-					if(vars.get(ins[varpos]) == null) {
-						vars.put(ins[varpos], 0);
-						System.out.println(ins[varpos] + ": " + vars.get(ins[varpos])); 
-					}
-				}
-			}
+			//perform instruction, located at any multiple of 3 in the instruction, depending on depth
 			switch(ins[0+3*(depth-1)]){
 				case "clear": //sets var to 0
 					vars.put(ins[varpos], 0);
