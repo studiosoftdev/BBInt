@@ -4,7 +4,7 @@ import java.util.ArrayList; //used for storing file
 
 public class bbint {
 
-	public static void main(String[] args) throws UnsupportedEncodingException{
+	public static void main(String[] args){
 		//setup our system - gonna be emulating it in a sense
 		ArrayList<String> lines = new ArrayList<String>(); //all the lines in the program so we can run through it
 		HashMap<String, Integer> vars = new HashMap<String, Integer>(); //all the vars we may discover in our program
